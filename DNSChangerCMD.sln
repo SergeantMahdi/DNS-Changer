@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DNSChangerCMD", "DNSChangerCMD\DNSChangerCMD.vcxproj", "{89298A47-A0E9-4E6C-952E-3EB60CCBDBEE}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{8C5C74D7-7FED-4B77-AD63-B0A70FB5EB13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89298A47-A0E9-4E6C-952E-3EB60CCBDBEE}.Debug|x64.ActiveCfg = Debug|x64
+		{89298A47-A0E9-4E6C-952E-3EB60CCBDBEE}.Debug|x64.Build.0 = Debug|x64
+		{89298A47-A0E9-4E6C-952E-3EB60CCBDBEE}.Debug|x86.ActiveCfg = Debug|Win32
+		{89298A47-A0E9-4E6C-952E-3EB60CCBDBEE}.Debug|x86.Build.0 = Debug|Win32
+		{89298A47-A0E9-4E6C-952E-3EB60CCBDBEE}.Release|x64.ActiveCfg = Release|x64
+		{89298A47-A0E9-4E6C-952E-3EB60CCBDBEE}.Release|x64.Build.0 = Release|x64
+		{89298A47-A0E9-4E6C-952E-3EB60CCBDBEE}.Release|x86.ActiveCfg = Release|Win32
+		{89298A47-A0E9-4E6C-952E-3EB60CCBDBEE}.Release|x86.Build.0 = Release|Win32
+		{8C5C74D7-7FED-4B77-AD63-B0A70FB5EB13}.Debug|x64.ActiveCfg = Debug
+		{8C5C74D7-7FED-4B77-AD63-B0A70FB5EB13}.Debug|x86.ActiveCfg = Debug
+		{8C5C74D7-7FED-4B77-AD63-B0A70FB5EB13}.Release|x64.ActiveCfg = Release
+		{8C5C74D7-7FED-4B77-AD63-B0A70FB5EB13}.Release|x86.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97BF67DE-A21B-4AB7-B5E4-FB2C64CE4654}
+	EndGlobalSection
+EndGlobal
