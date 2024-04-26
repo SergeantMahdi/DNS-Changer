@@ -1,0 +1,7 @@
+﻿  dnsOperatins.cpp
+  main.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 935 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  DNSChangerCMD.vcxproj -> E:\ProgrammingProjects\C++\DNSChangerCMD\x64\Release\DNSChangerCMD.exe

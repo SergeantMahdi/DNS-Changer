@@ -133,13 +133,16 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="dnsOperatins.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DNSAddresses.h" />
+    <ClInclude Include="dnsOperatins.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="TextColor.h" />
   </ItemGroup>

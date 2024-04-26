@@ -36,4 +36,5 @@ public:
 		HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 		SetConsoleTextAttribute(h, Reset);
 	}
+ 
 };
