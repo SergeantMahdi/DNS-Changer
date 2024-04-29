@@ -3,7 +3,7 @@
 #include <chrono>
 #include "conio.h"
 #include "DNSAddresses.h"
-#include "dnsOperatins.h"
+#include "DNS_OP.h"
 #include "TextColor.h"
 
 

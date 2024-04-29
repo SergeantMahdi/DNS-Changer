@@ -1,4 +1,4 @@
-#include "dnsOperatins.h"
+#include "DNS_OP.h"
 #include <regex>
 #include <utility>
 #include <thread>
