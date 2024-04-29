@@ -8,13 +8,12 @@
 void DNS_OPERATION::change_DNS(LPCSTR primary, LPCSTR secondary)
 {
     TextColor color;
-
-    //shell command
     LPCSTR application = "netsh";
 
-    //shell executer for primary and secondary DNS
     HINSTANCE hInstance = ShellExecuteA(NULL, "runas", application, primary, NULL, SW_SHOWNORMAL);
     HINSTANCE hInstance2 = ShellExecuteA(NULL, "runas", application, secondary, NULL, SW_SHOWNORMAL);
+    //USE createProcess();
+
 
     //Error handler of shell executer
     if (reinterpret_cast<uintptr_t>(hInstance) > 32) {
@@ -46,13 +45,12 @@ void DNS_OPERATION::disable_DNS(LPCSTR disableDNS)
 {
     TextColor color;
 
-    //shell command
+
     LPCSTR application = "netsh";
 
-    // shell executer to disable DNS
+
     HINSTANCE hInstance = ShellExecuteA(NULL, "runas", application, disableDNS, NULL, SW_SHOWNORMAL);
 
-    //Error handler of shell executer
     if (reinterpret_cast<uintptr_t>(hInstance) > 32) {
         color.success();
         std::cout << "DNS disabled successfully." << std::endl;
@@ -92,10 +90,8 @@ std::string DNS_OPERATION::exec(std::string command)
         return "popen failed!";
     }
 
-    // read till end of process:
     while (!feof(pipe)) {
 
-        // use buffer to read and add to result
         if (fgets(buffer, 128, pipe) != NULL)
             result += buffer;
     }
@@ -108,7 +104,7 @@ std::string DNS_OPERATION::exec(std::string command)
 std::pair<std::string, std::string> DNS_OPERATION::findDNS(int num)
 {
     std::string input;
-    if (num == 1){
+    if (num == 1) {
         input = exec("netsh interface ip show dns \"Ethernet\"");
     }
     else if (num == 2)
@@ -130,8 +126,8 @@ std::pair<std::string, std::string> DNS_OPERATION::findDNS(int num)
         if (count == 0) {
             dns1 = match.str();
         }
-        else if(count == 1) {
-        dns2 += match.str();
+        else if (count == 1) {
+            dns2 += match.str();
         }
 
         ++iter;
@@ -161,11 +157,3 @@ void DNS_OPERATION::testPing(int num)
     color.reset();
 }
 
-/*
-\b: This is a word boundary anchor, which asserts a position where a word character (such as a letter, digit, or underscore) is not followed or preceded by another word character. It ensures that the match occurs at the beginning or end of a word.
-(?: ... ): This is a non-capturing group. It's used here to group the expression 
-\d{1,3}\. (which matches one to three digits followed by a dot) and apply the {3} quantifier to the whole group, meaning it will match exactly three repetitions of the group.
-\d{1,3}\.: This part matches one to three digits followed by a dot. \d matches any digit, and {1,3} specifies that there should be one to three occurrences of the preceding digit pattern.
-{3}: This quantifier specifies that the preceding group (the one containing \d{1,3}\.) should be repeated exactly three times.
-\d{1,3}: This matches one to three digits, without the trailing dot. It's used to match the last part of the IP address.
-\b: Another word boundary anchor, ensuring that the match occurs at the end of a word.*/
